@@ -5,7 +5,7 @@
       <div class="box">
         <div class="question">       
           <div>
-            <h5>{{qIndex + 1}}. {{data[qIndex].title}}</h5>
+            <h5>{{data[qIndex].title}}</h5>
             <ul>
               <li
                 v-for="(a, index1) in data[qIndex].items"
@@ -51,7 +51,7 @@ import successBaseVue from './successBase.vue';
 console.error(data)
 
 const MAX_TIME = 10;//倒计时时间
-const QUES_AMOUNT = 3;//题目数量
+const QUES_AMOUNT = 4;//题目数量
 const MAX_FREQ = 3;//最大答题次数
 const ORDER = Math.floor(Math.random*10 - 1).toString;//0-9的随机数
 // const aaa = "base" + "1";
@@ -63,7 +63,7 @@ export default {
       backgroundDiv :{
 
       },
-      data: null,
+      data: data['base1'],
       remainSec: MAX_TIME,
       qIndex: 0,
       activeIndex: -1,
@@ -104,22 +104,24 @@ export default {
     if (this.isSenior) {
       console.error(true);
 
-      let n =  Math.ceil(Math.random() * 3)
+      n =  Math.ceil(Math.random() * 7)
 
       this.data = data['senior' + n]
       this.qIndex = 0;
+      console.error(this.data)
+      console.error(n)
       this.nextEvent();
     } else {
       if(again === '1') {
-      n = sessionStorage.getItem('base_n') || '1'
-    } else {
-      n = Math.ceil(Math.random() * 3)
-      sessionStorage.setItem('base_n', n)
-    }
-    this.data = data['base' + n]
+        n = sessionStorage.getItem('base_n') || '1'
+        } else {
+          n = Math.ceil(Math.random() * 7)
+          sessionStorage.setItem('base_n', n)
+        }
+       this.data = data['base' + n]
     }
 
-    console.error(this.data)
+   
     this.initInterval()
   },
   mounted() {
@@ -173,26 +175,18 @@ export default {
             // var r = window.confirm(
             //   "恭喜你完成初级挑战，获得初级奖品，是否选择冲击高级奖品？"
             // );
-            if (r == true) {
-              console.error(true);
-              // this.data = data.senior;//导入高级题目
+            // if (r == true) {
+            //   console.error(true);
+            //   // this.data = data.senior;//导入高级题目
 
-              let n =  Math.ceil(Math.random() * 3)
-    // if(again === '1') {
-    //   n = sessionStorage.getItem('base_n') || '1'
-    // } else {
-    //   n = Math.ceil(Math.random() * 3)
-    //   sessionStorage.setItem('base_n', n)
-    // }
-    // console.error(n)
-    // this.data = data['base' + n]
-              this.data = data['senior' + n]
-              this.qIndex = 0;
-              this.nextEvent();
-            } else {
-              console.error(false);
-              this.actionToSuccessBase();
-            }
+            //   let n =  Math.ceil(Math.random() * 3)
+            //   this.data = data['senior' + n]
+            //   this.qIndex = 0;
+            //   this.nextEvent();
+            // } else {
+            //   console.error(false);
+            //   this.actionToSuccessBase();
+            // }
           }
         } else {
           //高级题目
@@ -212,13 +206,8 @@ export default {
     },
     // 跳转到end
     actionToEnd() {
-      this.$router.push({
+      this.$router.replace({
         name: "end",
-        // query: {
-        //   a: 1,
-        //   b: 2,
-        //   c: 3
-        // }
       });
     },
     actionToSuccessSenior(){

@@ -45,9 +45,9 @@ export default {
         //   "您已答满3次，无法再次开始答题"
         // );
         this.$Modal.info({
-                            title: "您已答满3次，无法再次开始答题",
-                            content: ""
-                        });
+          title: "您已答满3次，无法再次开始答题",
+          content: ""
+        });
       } else {
         let count = value.count + 1;
         localStorage.setItem(

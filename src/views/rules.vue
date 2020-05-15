@@ -10,11 +10,9 @@
 <script>
 export default {
     methods: {
-        actionToFirst(){
-      this.$router.push({
-        name: "first"
-      })
-    }
+      actionToFirst(){
+        this.$router.back()
+      }
     }
 
 };

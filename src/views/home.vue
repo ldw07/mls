@@ -60,7 +60,7 @@ export default {
   methods: {
     actionToSelect() {
       // currentPhone
-      if (this.phone.val !== "") {
+      if ((/^1[3456789]\d{9}$/.test(this.phone.val))) {
         const value = JSON.parse(localStorage.getItem(this.phone.val));
         if (value) {
           //键值判断
@@ -100,6 +100,12 @@ export default {
             name: "select"
           });
         }
+      }else{
+        this.$Message['error']({
+                    background: true,
+                    content: '请输入正确的手机号码'
+                });
+
       }
     },
     actionToEnd() {

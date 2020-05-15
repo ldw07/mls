@@ -51,7 +51,7 @@ export default {
   margin-top: 0.8rem;
   width: 68vw;
   height: 48px;
-  font-size: 17px;
+  font-size: 0.3rem;
   line-height: 40px;
   border-radius: 100px;
   background: rgb(17, 0, 255);
