@@ -120,7 +120,7 @@ export default {
     }
 
     console.error(this.data)
-    // this.initInterval()
+    this.initInterval()
   },
   mounted() {
     for (var i = 0; i < this.data.length; i++) {
@@ -186,7 +186,6 @@ export default {
     // }
     // console.error(n)
     // this.data = data['base' + n]
-
               this.data = data['senior' + n]
               this.qIndex = 0;
               this.nextEvent();
@@ -336,7 +335,7 @@ export default {
     }
   }
 };
-</script>s
+</script>
 
 <style lang="scss" scoped>
 .font-center {

@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import first from '../views/first.vue'
+import rules from '../views/rules.vue'
 import home from '../views/home.vue'
 import end from '../views/end.vue'
 import question from '../views/question.vue'
@@ -13,6 +15,16 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    name: 'first',
+    component: first
+  },
+  {
+    path: '/rules',
+    name: 'rules',
+    component: rules
+  },
+  {
+    path: '/home',
     name: 'home',
     component: home
   },

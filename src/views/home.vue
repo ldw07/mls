@@ -121,17 +121,17 @@ button {
 }
 .toSelect {
 }
-// .button {
-//   background: #f0f0f0;
-//   margin: 20px auto 0;
-//   color: rgb(129, 124, 124);
-//   font-size: 20px;
-//   text-align: center;
-//   width: 75vw;
-//   height: 40px;
-//   line-height: 40px;
-//   border-radius: 20px;
-// }
+.button {
+  // background: #f0f0f0;
+  // margin: 20px auto 0;
+  // color: rgb(129, 124, 124);
+  // font-size: 20px;
+  // text-align: center;
+  // width: 75vw;
+  // height: 40px;
+  // line-height: 40px;
+  // border-radius: 20px;
+}
 .btnBg {
   // margin: 80vh auto 0;
   margin-top: 0.4rem;

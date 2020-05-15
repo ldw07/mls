@@ -47,10 +47,14 @@ export default {
       }
       if (value.count > MAX_FREQ-1) {
         // 弹框提示
-        var c = window.alert(
-          //有没有按钮
-          "您已答满3次，无法再次开始答题"
-        );
+        // var c = window.alert(
+        //   //有没有按钮
+        //   "您已答满3次，无法再次开始答题"
+        // );
+         this.$Modal.info({
+                            title: "您已答满3次，无法再次开始答题",
+                            content: ""
+                        });
       } else {
         let count = value.count + 1;
         localStorage.setItem(

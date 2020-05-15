@@ -1,10 +1,8 @@
 /* ------------------------------------------- template ------------------------------------------- */
 <template>
-  <div>
-    <div>您已超时</div>
-    <div>
-      <Button :disabled="btnState==false" :class="{btnBg:btnState}" @click="actionToQuestion">再试一次</Button>
-    </div>
+  <div class="temTimeOut">
+    <div class="sig">您已超时</div>
+    <button class="timeout" @click="actionToQuestion">再试一次</button>
   </div>
 </template>
 
@@ -42,10 +40,14 @@ export default {
 
       if (value.count > MAX_FREQ-1) {
         // 弹框提示
-        var c = window.alert(
-          //有没有按钮
-          "您已答满3次，无法再次开始答题"
-        );
+        // var c = window.alert(
+        //   //有没有按钮
+        //   "您已答满3次，无法再次开始答题"
+        // );
+        this.$Modal.info({
+                            title: "您已答满3次，无法再次开始答题",
+                            content: ""
+                        });
       } else {
         let count = value.count + 1;
         localStorage.setItem(
@@ -77,4 +79,31 @@ export default {
 
 /* -------------------------------------------- style -------------------------------------------- */
 <style scoped lang="scss">
+.sig {
+  margin-top: 7rem;
+  width: 100%;
+  height: 1rem;
+  font-size: 17px;
+  line-height: 1rem;
+  color: rgb(248, 4, 4);
+	font-size: 0.5rem;
+}
+.timeout {
+  margin-top: 1rem;
+  width: 32vw;
+  height: 1rem;
+  font-size: 0.32rem;
+  line-height: 1rem;
+  border-radius: 100px;
+  background: rgb(17, 0, 255);
+  color: #fff;
+}
+
+.temTimeOut {
+  padding-top:2rem;
+  width: 100vw;
+  min-height: 100vh;
+  background: rgb(142,181,233) url(../assets/fail.png) no-repeat center top;
+  background-size: 100%;
+}
 </style>
