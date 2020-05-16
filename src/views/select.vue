@@ -9,7 +9,7 @@
       <div class="senior-item" :class="{'active': currentSeniorIndex === index}" v-for="(item, index) in senior" :key="index" @click="actionSelectSenior(item,index)"></div>
     </div>
 
-    <button :disabled="btnState==false" class="btn" :class="{btnBg:btnState}" @click="actionToQuestion">选择奖品，开始答题</button>
+    <button :disabled="btnState==false" class="btn" :class="{btnBg:btnState}" @click="actionToQuestion">选择基础礼和升级礼，开始答题</button>
     
     
   </div>
@@ -134,10 +134,13 @@ export default {
   border-radius: 0.6rem;
   border: none;
   margin: 20px auto 0;
-  font-size: 0.3rem;
+  font-size: 0.35rem;
+  font-weight: 600;
+  font-family: '微软雅黑';
   &.btnBg{
-    background: rgb(255, 136, 0);
+    background: #1100ff;
     color: #fff;
+
     }
 }
 

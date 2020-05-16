@@ -37,7 +37,7 @@ export default {
 }
 
 .begin {
-  margin-top: 10rem;
+  margin-top: 9.3rem;
   width: 68vw;
   height: 48px;
   font-size: 17px;

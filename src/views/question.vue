@@ -50,7 +50,7 @@ import successBaseVue from './successBase.vue';
 
 console.error(data)
 
-const MAX_TIME = 10;//倒计时时间
+const MAX_TIME = 600;//倒计时时间
 const QUES_AMOUNT = 6;//题目数量
 const MAX_FREQ = 3;//最大答题次数
 const ORDER = Math.floor(Math.random*10 - 1).toString;//0-9的随机数
@@ -336,12 +336,13 @@ export default {
 .sz_option {
   margin-top: 4rem;
   margin: 10px auto 0;
-  background: rgba(228, 110, 202, 0.986);
+  background: rgba(17, 0, 255, 0.514);
   width: 80%;
   border-radius: 2.1rem;
   height: 1rem;
   font-size: 0.3rem;
   padding: 0 0.2rem;
+  color: white;
 }
 
 .count {
