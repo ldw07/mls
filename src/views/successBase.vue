@@ -1,6 +1,6 @@
 <template>
  <div class="baseSuccess">
-     <p class="tips" v-if="baseGift">恭喜您获得奖品: <br>{{baseGift}}</p>
+     <p class="tips" v-if="baseGift">恭喜您获得奖品: <br>{{baseGift}}<br>用户：{{phoneNum}} </p>
 
 			<button class="goOnChallenge" @click="actionToSenior">点击继续冲刺>></button>
      <!-- <button :disabled="btnState==false" :class="{btnBg:btnState}" @click="actionToSenior">点击领取奖品</button> -->
@@ -17,7 +17,8 @@ export default {
     data(){
         return{
             baseGift: localStorage.getItem('base_gift'),//获取之前选的奖品选项
-            seniorGift: localStorage.getItem('senior_gift')
+            seniorGift: localStorage.getItem('senior_gift'),
+            phoneNum: localStorage.getItem('phone')
         }
     },
     methods:{

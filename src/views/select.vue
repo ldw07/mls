@@ -95,7 +95,9 @@ export default {
     height: 3.6rem;
     &.active {
       position: relative;
+      // background-color: rgba(174, 207, 172, 0.521);
       &::after {
+<<<<<<< HEAD
         right: 0.06rem;
         bottom: 0.15rem;
         position: absolute;
@@ -107,6 +109,19 @@ export default {
         border-radius: 0.6rem;
         border-color: blue;
         border-width: 0.1rem;
+=======
+            right: 0rem;
+    bottom: 0.2rem;
+    position: absolute;
+    content: '';
+    background: rgba(9, 139, 5,0);
+    width: 2.4rem;
+    height: 2.6rem;
+    border-style: ridge;
+    border-color: rgba(9, 139, 5,1);
+    border-radius: 17%;
+
+>>>>>>> e63eff8e4e1c4dfaad98bbf9acf49a62648cebab
       }
     }
   }
@@ -123,6 +138,7 @@ export default {
     &.active {
       position: relative;
       &::after {
+<<<<<<< HEAD
         right: 0.1rem;
         bottom: 0.1rem;
         position: absolute;
@@ -131,6 +147,18 @@ export default {
         width: 0.4rem;
         height: 0.4rem;
         border-radius: 50%;
+=======
+            right: 0.1rem;
+    bottom: 0.16rem;
+    position: absolute;
+    content: '';
+    background: rgba(9, 139, 5,0);
+    width: 3.4rem;
+    height: 2.6rem;
+    border-style: ridge;
+    border-color: rgba(9, 139, 5,1);
+    border-radius: 19%;
+>>>>>>> e63eff8e4e1c4dfaad98bbf9acf49a62648cebab
       }
     }
   }

@@ -46,8 +46,11 @@ export default {
         // );
         this.$Modal.info({
           title: "您已答满3次，无法再次开始答题",
-          content: ""
+          okText: "确定",
         });
+        this.$router.replace({
+            name: 'home'
+          })
       } else {
         let count = value.count + 1;
         localStorage.setItem(

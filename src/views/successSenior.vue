@@ -1,6 +1,6 @@
 <template>
   <div class="successSinior">
-    <p class="seniorTips" v-if="seniorGift">{{seniorGift}} <br> 只能领取一次哟</p>
+    <p class="seniorTips" v-if="seniorGift">{{seniorGift}} <br> 只能领取一次哟<br>用户：{{phoneNum}}</p>
   </div>
 </template>
 
@@ -9,7 +9,9 @@ export default {
   data() {
     return {
       baseGift: localStorage.getItem("base_gift"), //获取之前选的奖品选项
-      seniorGift: localStorage.getItem("senior_gift")
+      seniorGift: localStorage.getItem("senior_gift"),
+      phoneNum: localStorage.getItem('phone')
+
     };
   }
 };

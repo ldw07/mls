@@ -66,10 +66,10 @@ export default {
           //键值判断
           if (value.count >= 3) {
             // 弹框提示
-            var c = window.alert(
-              //有没有按钮
-              "您已答满3次，无法再次开始答题"
-            );
+            this.$Modal.info({
+          title: "您已答满3次，无法再次开始答题",
+          content: ""
+        });
           } else {
             this.$router.push({
               name: "question"

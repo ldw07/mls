@@ -51,10 +51,13 @@ export default {
         //   //有没有按钮
         //   "您已答满3次，无法再次开始答题"
         // );
-         this.$Modal.info({
-                            title: "您已答满3次，无法再次开始答题",
-                            content: ""
-                        });
+        this.$Modal.info({
+          title: "您已答满3次，无法再次开始答题",
+          okText: "确定",
+        });
+        this.$router.replace({
+            name: 'home'
+          })
       } else {
         let count = value.count + 1;
         localStorage.setItem(
