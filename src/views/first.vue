@@ -15,7 +15,7 @@ export default {
     begin() {
       this.$router.push({
         name: "home"
-      });
+      })
     },
     viewRules() {
       this.$router.push({

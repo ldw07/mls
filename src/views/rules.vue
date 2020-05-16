@@ -37,7 +37,7 @@ body{
     position: relative;
     z-index: 30;
     font-size: 180%;
-    color: white;
+    color: rgba(255, 255, 255, 0);
     bottom: 10vh;
     width: 60vw;
     font-size: 0.35rem;
@@ -50,7 +50,7 @@ body{
   font-size: 17px;
   line-height: 40px;
   border-radius: 100px;
-  background: rgb(17, 0, 255);
+  background: rgba(17, 0, 255, 0);
   color: #fff;
   
 }
