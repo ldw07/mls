@@ -45,13 +45,10 @@ body{
 }
 
 .determin {
-  margin-top: 0.2rem;
+  margin-top: 11.9rem;
   width: 68vw;
   height: 48px;
-  font-size: 17px;
-  line-height: 40px;
-  border-radius: 100px;
-  background: rgba(17, 0, 255, 0);
+  font-size: 1rem;
   color: #fff;
   
 }
