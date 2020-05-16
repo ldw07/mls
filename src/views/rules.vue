@@ -1,9 +1,8 @@
 <template>
   <div class="view">
-    <div> 
-      <img src="@/assets/rules.png" alt="" id="img_rule" />
-      <button class="determin" @click="actionToFirst" id="back_btn">返回</button>
-    </div>
+      <Icon class="determin" type="ios-close-circle-outline" @click="actionToFirst"/>
+      <!-- <button class="determin" @click="actionToFirst" id="back_btn">返回</button> -->
+
   </div>
 </template>
 
@@ -26,9 +25,11 @@ body{
     background-color: #8eb5e9; 
 }
 .view {
-  background: #8eb5e9;  
   width: 100vw;
   min-height: 100vh;
+  background: rgb(44, 42, 66) url(../assets/rules.png) no-repeat center top;
+  background-size: 100%;
+  overflow: hidden;
 }
 #img_rule{
     width: 100vw;
@@ -44,13 +45,10 @@ body{
 }
 
 .determin {
-  margin-top: 0.2rem;
-  width: 68vw;
-  height: 48px;
-  font-size: 17px;
-  line-height: 40px;
-  border-radius: 100px;
-  background: rgb(17, 0, 255);
+  margin-top: 11.9rem;
+  font-size: 1rem;
+  /* border-radius: 100px; */
+  /* background: rgb(17, 0, 255); */
   color: #fff;
   
 }
