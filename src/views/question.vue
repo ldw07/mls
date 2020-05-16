@@ -50,7 +50,7 @@ import successBaseVue from './successBase.vue';
 
 console.error(data)
 
-const MAX_TIME = 600;//倒计时时间
+const MAX_TIME = 2;//倒计时时间
 const QUES_AMOUNT = 6;//题目数量
 const MAX_FREQ = 3;//最大答题次数
 const ORDER = Math.floor(Math.random*10 - 1).toString;//0-9的随机数

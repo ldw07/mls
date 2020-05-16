@@ -90,15 +90,19 @@ export default {
     height: 3.6rem;
     &.active {
       position: relative;
+      // background-color: rgba(174, 207, 172, 0.521);
       &::after {
-        right: 0rem;
-        bottom: 0.2rem;
-        position: absolute;
-        content: '';
-        background: #f80;
-        width: 0.4rem;
-        height: 0.4rem;
-        border-radius: 50%;
+            right: 0rem;
+    bottom: 0.2rem;
+    position: absolute;
+    content: '';
+    background: rgba(9, 139, 5,0);
+    width: 2.4rem;
+    height: 2.6rem;
+    border-style: ridge;
+    border-color: rgba(9, 139, 5,1);
+    border-radius: 17%;
+
       }
     }
   }
@@ -115,14 +119,16 @@ export default {
     &.active {
       position: relative;
       &::after {
-        right: 0.1rem;
-        bottom: 0.1rem;
-        position: absolute;
-        content: '';
-        background: #f80;
-        width: 0.4rem;
-        height: 0.4rem;
-        border-radius: 50%;
+            right: 0.1rem;
+    bottom: 0.16rem;
+    position: absolute;
+    content: '';
+    background: rgba(9, 139, 5,0);
+    width: 3.4rem;
+    height: 2.6rem;
+    border-style: ridge;
+    border-color: rgba(9, 139, 5,1);
+    border-radius: 19%;
       }
     }
   }
