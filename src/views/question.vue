@@ -61,7 +61,6 @@ export default {
   data() {
     return {
       backgroundDiv :{
-
       },
       data: data['base1'],
       remainSec: MAX_TIME,
@@ -336,7 +335,7 @@ export default {
 .sz_option {
   margin-top: 4rem;
   margin: 10px auto 0;
-  background: rgba(37,35,57,0.5);
+  background: rgba(17, 0, 255, 0.514);
   width: 80%;
   border-radius: 2.1rem;
   height: 1rem;
@@ -346,9 +345,9 @@ export default {
 }
 
 .count {
-  margin-top: 0.6rem;
+  margin-top: 1.2rem;
   font-size: 0.6rem;
-  color: white;
+  color: red;
 }
 .fixed {
   width: 50px;
@@ -560,11 +559,9 @@ export default {
     width: 100%;
     height: 100%;
     // background: #fff;
-    // box-shadow: 0 0 20px rgba(17, 0, 255, 0.1);
+    // box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 10px;
     box-sizing: border-box;
-    color: white;
-
     h5 {
       font-weight: 500;
       line-height: 0.5rem;
@@ -572,7 +569,6 @@ export default {
       box-sizing: border-box;
       margin: 0;
       font-size: 0.4rem;
-      padding: 1.2rem;
     }
     ul {
       padding-top: 0.8rem;
@@ -621,7 +617,7 @@ export default {
 .questionJS {
   width: 100vw;
   min-height: 100vh;
-  background: rgb(44, 42, 66) url(../assets/question.png) no-repeat center top;
+  background: rgb(142,181,233) url(../assets/question.png) no-repeat center top;
   background-size: 100%;
   overflow: hidden;
 }
