@@ -1,14 +1,14 @@
 /* ------------------------------------------- template ------------------------------------------- */
 <template>
   <div class="temTimeOut">
-    <div class="sig">您已超时</div>
-    <button class="timeout" @click="actionToQuestion">再试一次</button>
+    <div class="sig"></div>
+    <button class="timeout" @click="actionToQuestion"></button>
   </div>
 </template>
 
 /* -------------------------------------------- script -------------------------------------------- */
 <script>
-const MAX_FREQ = 3;//最大答题次数
+const MAX_FREQ = 3; //最大答题次数
 export default {
   name: "",
   components: {},
@@ -33,12 +33,10 @@ export default {
     /* ----------------------事件调用函数------------------------ */
     // 事件调用函数注释
     actionToQuestion() {
-      const phone = localStorage.getItem("phone")
-      const value = JSON.parse(
-        localStorage.getItem(phone)
-      );
+      const phone = localStorage.getItem("phone");
+      const value = JSON.parse(localStorage.getItem(phone));
 
-      if (value.count > MAX_FREQ-1) {
+      if (value.count > MAX_FREQ - 1) {
         // 弹框提示
         // var c = window.alert(
         //   //有没有按钮
@@ -46,11 +44,11 @@ export default {
         // );
         this.$Modal.info({
           title: "您已答满3次，无法再次开始答题",
-          okText: "确定",
+          okText: "确定"
         });
         this.$router.replace({
-            name: 'home'
-          })
+          name: "home"
+        });
       } else {
         let count = value.count + 1;
         localStorage.setItem(
@@ -89,24 +87,23 @@ export default {
   font-size: 17px;
   line-height: 1rem;
   color: rgb(248, 4, 4);
-	font-size: 0.5rem;
+  font-size: 0.5rem;
 }
 .timeout {
-  margin-top: 1rem;
-  width: 32vw;
-  height: 1rem;
-  font-size: 0.32rem;
-  line-height: 1rem;
+  margin-top: 0rem;
+  width: 73vw;
+  height: 1.1rem;
+  /* font-size: 0.32rem; */
+  /* line-height: 1rem; */
   border-radius: 100px;
-  background: rgb(17, 0, 255);
-  color: #fff;
+  background: none;
 }
 
 .temTimeOut {
-  padding-top:2rem;
+  padding-top: 2rem;
   width: 100vw;
   min-height: 100vh;
-  background: rgb(142,181,233) url(../assets/fail.png) no-repeat center top;
+  background: rgb(44, 42, 66) url(../assets/timeout.png) no-repeat center top;
   background-size: 100%;
 }
 </style>

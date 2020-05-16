@@ -1,12 +1,17 @@
 <template>
   <div class="home">
     <div class="login" :style="backgroundDiv">
-        
-        <!-- @blur="phone.test()" -->
+      <!-- @blur="phone.test()" -->
       <!-- <div @click="actionToSelect">home  to select</div> -->
       <!-- <button @click="actionToSelect" id="toSelect">跳转到选择界面</button> -->
       <div class="input">
-        <input class="phone input-style" type="tel" v-model="phone.val" placeholder="请输入手机号" maxlength="11">
+        <input
+          class="phone input-style"
+          type="tel"
+          v-model="phone.val"
+          placeholder="请输入手机号"
+          maxlength="11"
+        />
         <!-- <Input
           size="large"
           class="phone input-style"
@@ -16,11 +21,9 @@
           placeholder="请输入手机号"
           oninput="value=value.replace(/[^\d]/g,'')"
           maxlength="11"
-        /> -->
-        <Button :disabled="btnState==false" :class="{btnBg:btnState}" @click="actionToSelect">确认登录</Button>
+        />-->
+        <Button :disabled="btnState==false" :class="{btnBg:btnState}" @click="actionToSelect"></Button>
       </div>
-      
-      
 
       <!-- <div @click="actionToEnd">点击这里到尾页</div> -->
     </div>
@@ -34,9 +37,7 @@ export default {
   name: "home",
   data() {
     return {
-      backgroundDiv: {
-
-      },
+      backgroundDiv: {},
       hintShow: false, // 提示语显示
       hint: "信息填写错误", // 提示语
       input: "",
@@ -60,16 +61,16 @@ export default {
   methods: {
     actionToSelect() {
       // currentPhone
-      if ((/^1[3456789]\d{9}$/.test(this.phone.val))) {
+      if (/^1[3456789]\d{9}$/.test(this.phone.val)) {
         const value = JSON.parse(localStorage.getItem(this.phone.val));
         if (value) {
           //键值判断
           if (value.count >= 3) {
             // 弹框提示
             this.$Modal.info({
-          title: "您已答满3次，无法再次开始答题",
-          content: ""
-        });
+              title: "您已答满3次，无法再次开始答题",
+              content: ""
+            });
           } else {
             this.$router.push({
               name: "question"
@@ -100,12 +101,11 @@ export default {
             name: "select"
           });
         }
-      }else{
-        this.$Message['error']({
-                    background: true,
-                    content: '请输入正确的手机号码'
-                });
-
+      } else {
+        this.$Message["error"]({
+          background: true,
+          content: "请输入正确的手机号码"
+        });
       }
     },
     actionToEnd() {
@@ -125,35 +125,22 @@ button {
   outline: none;
   border: none;
 }
-.toSelect {
-}
-.button {
-  // background: #f0f0f0;
-  // margin: 20px auto 0;
-  // color: rgb(129, 124, 124);
-  // font-size: 20px;
-  // text-align: center;
-  // width: 75vw;
-  // height: 40px;
-  // line-height: 40px;
-  // border-radius: 20px;
-}
+
 .btnBg {
   // margin: 80vh auto 0;
-  margin-top: 0.4rem;
-  width: 68vw;
-  height: 48px;
+  margin-top: 0.8rem;
+  width: 33vw;
+  height: 1rem;
   font-size: 17px;
   line-height: 40px;
-  border-radius: 100px;
-  background: rgb(17, 0, 255);
-  color: #fff;
+  border-radius: 2rem;
+  background: none;
 }
 
 .login {
   width: 100vw;
   min-height: 100vh;
-  background: #c1d7f3 url(../assets/login.png) no-repeat center top;
+  background: rgb(139, 138, 151) url(../assets/login.png) no-repeat center top;
   background-size: 100%;
   // overflow: hidden;
 }
@@ -168,9 +155,8 @@ button {
 }
 
 .input {
-  padding-top: 10.3rem;
+  padding-top: 6.7rem;
   margin: 0 auto 0;
   // height: 48vh;
 }
-
 </style>

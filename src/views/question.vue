@@ -50,7 +50,7 @@ import successBaseVue from './successBase.vue';
 
 console.error(data)
 
-const MAX_TIME = 2;//倒计时时间
+const MAX_TIME = 10;//倒计时时间
 const QUES_AMOUNT = 6;//题目数量
 const MAX_FREQ = 3;//最大答题次数
 const ORDER = Math.floor(Math.random*10 - 1).toString;//0-9的随机数
@@ -559,6 +559,7 @@ export default {
   .question {
     width: 100%;
     height: 100%;
+    text-align: left;
     // background: #fff;
     // box-shadow: 0 0 20px rgba(17, 0, 255, 0.1);
     padding: 10px;
@@ -566,7 +567,7 @@ export default {
     color: white;
 
     h5 {
-      font-weight: 500;
+      font-weight: 600;
       line-height: 0.5rem;
       padding-top: 1.2rem;
       box-sizing: border-box;

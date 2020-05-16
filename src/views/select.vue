@@ -25,7 +25,7 @@
       class="btn"
       :class="{btnBg:btnState}"
       @click="actionToQuestion"
-    >选择基础礼和升级礼，开始答题</button>
+    >选择基础礼和升级礼<br>开始答题</button>
   </div>
 </template>
 <script>
@@ -37,8 +37,8 @@ export default {
     return {
       currentBaseIndex: -1,
       currentSeniorIndex: -1,
-      base: ["体脂秤", "血糖仪", "血压仪"],
-      senior: ["老人体检套餐", "办公族体检套餐"]
+      base: ["体脂秤", "血压仪", "血糖仪"],
+      senior: ["父母体检套餐", "个人体检套餐"]
     };
   },
   components: {},
@@ -82,7 +82,7 @@ export default {
   padding-top: 2rem;
   width: 100vw;
   min-height: 100vh;
-  background: rgb(142, 181, 233) url(../assets/reward_select.png) no-repeat
+  background: rgb(44, 42, 66) url(../assets/reward_select.png) no-repeat
     center top;
   background-size: 100%;
 }
@@ -90,6 +90,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 0.3rem;
   &-item {
     width: 33vw;
     height: 3.6rem;
@@ -97,31 +98,16 @@ export default {
       position: relative;
       // background-color: rgba(174, 207, 172, 0.521);
       &::after {
-<<<<<<< HEAD
-        right: 0.06rem;
-        bottom: 0.15rem;
+        right: 0.95rem;
+        bottom: 0.5rem;
         position: absolute;
         content: "";
-        background: none;
-        width: 2.4rem;
-        height: 3.4rem;
-        border-style: ridge;
-        border-radius: 0.6rem;
-        border-color: blue;
-        border-width: 0.1rem;
-=======
-            right: 0rem;
-    bottom: 0.2rem;
-    position: absolute;
-    content: '';
-    background: rgba(9, 139, 5,0);
-    width: 2.4rem;
-    height: 2.6rem;
-    border-style: ridge;
-    border-color: rgba(9, 139, 5,1);
-    border-radius: 17%;
-
->>>>>>> e63eff8e4e1c4dfaad98bbf9acf49a62648cebab
+        background: rgb(223, 191, 152);
+        width: 0.4rem;
+        height: 0.4rem;
+        /* border-style: double; */
+        /* border-color: rgb(255,105,180); */
+        border-radius: 50%;
       }
     }
   }
@@ -129,6 +115,7 @@ export default {
 
 .senior {
   margin-top: 0.8rem;
+  padding: 0 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,43 +125,33 @@ export default {
     &.active {
       position: relative;
       &::after {
-<<<<<<< HEAD
-        right: 0.1rem;
-        bottom: 0.1rem;
+        right: 1.22rem;
+        bottom: 0.4rem;
         position: absolute;
         content: "";
-        background: #f80;
+        background: rgb(223, 191, 152);
         width: 0.4rem;
         height: 0.4rem;
+        /* border-style: ridge; */
+        /* border-color: #098b05; */
         border-radius: 50%;
-=======
-            right: 0.1rem;
-    bottom: 0.16rem;
-    position: absolute;
-    content: '';
-    background: rgba(9, 139, 5,0);
-    width: 3.4rem;
-    height: 2.6rem;
-    border-style: ridge;
-    border-color: rgba(9, 139, 5,1);
-    border-radius: 19%;
->>>>>>> e63eff8e4e1c4dfaad98bbf9acf49a62648cebab
       }
     }
   }
 }
 
 .btn {
-  width: 80vw;
-  height: 1rem;
+  width: 60vw;
+  height: 1.3rem;
+  /* padding: 0.3rem; */
   border-radius: 0.6rem;
   border: none;
-  margin: 20px auto 0;
   font-size: 0.35rem;
   font-weight: 600;
   font-family: "微软雅黑";
+  margin-top: 1.5rem;
   &.btnBg {
-    background: #1100ff;
+    background: rgb(216, 183, 103);
     color: #fff;
   }
 }

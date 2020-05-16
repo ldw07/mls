@@ -1,17 +1,16 @@
 /* ------------------------------------------- template ------------------------------------------- */
 <template>
-  <div class="fail"> 
+  <div class="fail">
     <!-- <div>好遗憾哦，你答错了</div> -->
 
-    <button class="btn" @click="actionToQuestion">再试一次</button>
+    <button class="btn" @click="actionToQuestion"></button>
   </div>
 </template>
 
 /* -------------------------------------------- script -------------------------------------------- */
 <script>
-const MAX_FREQ = 3;//最大答题次数
+const MAX_FREQ = 3; //最大答题次数
 export default {
-  
   name: "",
   components: {},
 
@@ -35,17 +34,15 @@ export default {
     /* ----------------------事件调用函数------------------------ */
     // 事件调用函数注释
     actionToQuestion() {
-      const phone = localStorage.getItem("phone")
-      const value = JSON.parse(
-        localStorage.getItem(phone)
-      );
+      const phone = localStorage.getItem("phone");
+      const value = JSON.parse(localStorage.getItem(phone));
 
-      if(!value) {
+      if (!value) {
         this.$route.push({
-          name: '/'
-        })
+          name: "/"
+        });
       }
-      if (value.count > MAX_FREQ-1) {
+      if (value.count > MAX_FREQ - 1) {
         // 弹框提示
         // var c = window.alert(
         //   //有没有按钮
@@ -53,11 +50,11 @@ export default {
         // );
         this.$Modal.info({
           title: "您已答满3次，无法再次开始答题",
-          okText: "确定",
+          okText: "确定"
         });
         this.$router.replace({
-            name: 'home'
-          })
+          name: "home"
+        });
       } else {
         let count = value.count + 1;
         localStorage.setItem(
@@ -90,23 +87,23 @@ export default {
 /* -------------------------------------------- style -------------------------------------------- */
 <style scoped lang="scss">
 .fail {
-  padding-top:2rem;
+  padding-top: 2rem;
   width: 100vw;
   min-height: 100vh;
-  background: rgb(142,181,233) url(../assets/fail.png) no-repeat center top;
+  background: rgb(44, 42, 66) url(../assets/fail.png) no-repeat center top;
   background-size: 100%;
 }
 
 .btn {
   position: fixed;
-  bottom: 1rem;
-  width: 68vw;
-  height: 1rem;
-  font-size: 0.3rem;
+  bottom: 2.4rem;
+  width: 73vw;
+  height: 4.1rem;
+  /* font-size: 0.3rem; */
   border-radius: 1rem;
-  background: rgb(17, 0, 255);
-  color: #fff;
-  left: 50%;
+  background: none;
+  /* color: #fff; */
+  /* left: 50%; */
   transform: translateX(-50%);
 }
 </style>

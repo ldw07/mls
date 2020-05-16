@@ -45,20 +45,10 @@ body{
 }
 
 .determin {
-<<<<<<< HEAD
   margin-top: 11.9rem;
   font-size: 1rem;
   /* border-radius: 100px; */
   /* background: rgb(17, 0, 255); */
-=======
-  margin-top: 0.2rem;
-  width: 68vw;
-  height: 48px;
-  font-size: 17px;
-  line-height: 40px;
-  border-radius: 100px;
-  background: rgba(17, 0, 255, 0);
->>>>>>> e63eff8e4e1c4dfaad98bbf9acf49a62648cebab
   color: #fff;
   
 }
