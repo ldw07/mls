@@ -13,9 +13,14 @@
 export default {
   methods: {
     begin() {
-      this.$router.push({
-        name: "home"
-      })
+      // this.$router.push({
+      //   name: "home"
+      // })
+      this.$Modal.info({
+          title: "感谢您的参与！",
+          content: "所有奖品均已发放完毕，欢迎您关注善诊微信公众号获取更多活动信息！",
+          okText: "确定"
+        });
     },
     viewRules() {
       this.$router.push({
@@ -30,19 +35,17 @@ export default {
 .first {
   width: 100vw;
   min-height: 100vh;
-  background: rgb(44, 42, 66) url(../assets/load.png) no-repeat center
+  background: #0C1126 url(../assets/load.png) no-repeat center
     top;
   background-size: 100%;
   overflow: hidden;
 }
 
 .begin {
-  margin-top: 9.2rem;
-    width: 25vw;
-    height: 14vh;
-    /* font-size: 17px; */
-    /* line-height: 40px; */
-    border-radius: 50%;
+      margin-top: 7.6rem;
+    width: 73vw;
+    height: 8vh;
+    border-radius: 0%;
     background: none;
 }
 

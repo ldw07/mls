@@ -45,7 +45,7 @@ body{
 }
 
 .determin {
-  margin-top: 11.9rem;
+  margin-top: 11rem;
   font-size: 1rem;
   /* border-radius: 100px; */
   /* background: rgb(17, 0, 255); */

@@ -29,7 +29,7 @@
   </div>
 </template>
 <script>
-// @ is an alias to /src
+
 
 export default {
   name: "select1",
@@ -79,10 +79,10 @@ export default {
 
 <style lang="scss" scoped>
 .select {
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   width: 100vw;
   min-height: 100vh;
-  background: rgb(44, 42, 66) url(../assets/reward_select.png) no-repeat
+  background: #0C1126 url(../assets/reward_select.png) no-repeat
     center top;
   background-size: 100%;
 }
@@ -98,16 +98,14 @@ export default {
       position: relative;
       // background-color: rgba(174, 207, 172, 0.521);
       &::after {
-        right: 0.95rem;
-        bottom: 0.5rem;
-        position: absolute;
-        content: "";
-        background: rgb(223, 191, 152);
-        width: 0.4rem;
-        height: 0.4rem;
-        /* border-style: double; */
-        /* border-color: rgb(255,105,180); */
-        border-radius: 50%;
+            right: 0.45rem;
+    bottom: 0.6rem;
+    position: absolute;
+    content: "";
+    background: white;
+    width: 1.4rem;
+    height: 0.07rem;
+    border-radius: 0%;
       }
     }
   }
@@ -125,16 +123,14 @@ export default {
     &.active {
       position: relative;
       &::after {
-        right: 1.22rem;
-        bottom: 0.4rem;
-        position: absolute;
-        content: "";
-        background: rgb(223, 191, 152);
-        width: 0.4rem;
-        height: 0.4rem;
-        /* border-style: ridge; */
-        /* border-color: #098b05; */
-        border-radius: 50%;
+          right: 0.75rem;
+    bottom: 0.5rem;
+    position: absolute;
+    content: "";
+    background: white;
+    width: 1.4rem;
+    height: 0.07rem;
+    border-radius: 0%;
       }
     }
   }
@@ -149,10 +145,11 @@ export default {
   font-size: 0.35rem;
   font-weight: 600;
   font-family: "微软雅黑";
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   &.btnBg {
-    background: rgb(216, 183, 103);
+    background: none;
     color: #fff;
+    border: 2px solid white;
   }
 }
 </style>

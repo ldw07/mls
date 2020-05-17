@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     actionToSenior() {
-      location.href = "/question?isSenior=1";
+      location.href = "/#/question?isSenior=1";
     }
   }
 };
@@ -33,21 +33,18 @@ export default {
 .baseSuccess {
   width: 100vw;
   min-height: 100vh;
-  background: rgb(44, 42, 66) url(../assets/base_success.png) no-repeat center
+  background: #0C1126 url(../assets/base_success.png) no-repeat center
     top;
   background-size: 100%;
   overflow: hidden;
 }
 
 .goOnChallenge {
-  margin-top: 4.45rem;
-  width: 75vw;
-  height: 48px;
-  /* font-size: 17px; */
-  /* line-height: 40px; */
-  border-radius: 2rem;
-  background: none;
-  color: #fff;
+    margin-top: 1.45rem;
+    width: 75vw;
+    height: 23vh;
+    border-radius: 1rem;
+    background: none;
 }
 .tips {
   margin-top: 4rem;

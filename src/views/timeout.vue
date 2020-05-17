@@ -90,13 +90,11 @@ export default {
   font-size: 0.5rem;
 }
 .timeout {
-  margin-top: 0rem;
-  width: 73vw;
-  height: 1.1rem;
-  /* font-size: 0.32rem; */
-  /* line-height: 1rem; */
-  border-radius: 100px;
-  background: none;
+ margin-top: -6rem;
+    width: 79vw;
+    height: 8.1rem;
+    border-radius: 100px;
+    background: none;
 }
 
 .temTimeOut {

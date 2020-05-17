@@ -90,15 +90,15 @@ export default {
   padding-top: 2rem;
   width: 100vw;
   min-height: 100vh;
-  background: rgb(44, 42, 66) url(../assets/fail.png) no-repeat center top;
+  background: #0C1126 url(../assets/fail.png) no-repeat center top;
   background-size: 100%;
 }
 
 .btn {
   position: fixed;
-  bottom: 2.4rem;
-  width: 73vw;
-  height: 4.1rem;
+  bottom: 0rem;
+  width: 100vw;
+  height: 19.1rem;
   /* font-size: 0.3rem; */
   border-radius: 1rem;
   background: none;

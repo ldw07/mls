@@ -5,7 +5,7 @@
       <div class="box">
         <div class="question">       
           <div>
-            <h5>{{data[qIndex].title}}</h5>
+            <h5>{{data[qIndex].id}}. {{data[qIndex].title}}</h5>
             <ul>
               <li
                 v-for="(a, index1) in data[qIndex].items"
@@ -51,7 +51,7 @@ import successBaseVue from './successBase.vue';
 console.error(data)
 
 const MAX_TIME = 10;//倒计时时间
-const QUES_AMOUNT = 6;//题目数量
+const QUES_AMOUNT = 6;//基础题目数量
 const MAX_FREQ = 3;//最大答题次数
 const ORDER = Math.floor(Math.random*10 - 1).toString;//0-9的随机数
 // const aaa = "base" + "1";
@@ -61,7 +61,6 @@ export default {
   data() {
     return {
       backgroundDiv :{
-
       },
       data: data['base1'],
       remainSec: MAX_TIME,
@@ -336,7 +335,8 @@ export default {
 .sz_option {
   margin-top: 4rem;
   margin: 10px auto 0;
-  background: rgba(37,35,57,0.5);
+  background:none;
+  border: 1px solid white;
   width: 80%;
   border-radius: 2.1rem;
   height: 1rem;
@@ -346,7 +346,7 @@ export default {
 }
 
 .count {
-  margin-top: 0.6rem;
+  margin-top: 1.2rem;
   font-size: 0.6rem;
   color: white;
 }
@@ -557,15 +557,13 @@ export default {
   font-family: "Microsoft YaHei";
   font-size: 15px;
   .question {
-    width: 100%;
+       width: 100%;
     height: 100%;
     text-align: left;
-    // background: #fff;
-    // box-shadow: 0 0 20px rgba(17, 0, 255, 0.1);
-    padding: 10px;
-    box-sizing: border-box;
+    margin-top: -0.5rem;
+    padding: 0.2rem;
     color: white;
-
+    box-sizing: border-box;
     h5 {
       font-weight: 600;
       line-height: 0.5rem;
@@ -573,10 +571,10 @@ export default {
       box-sizing: border-box;
       margin: 0;
       font-size: 0.4rem;
-      padding: 1.2rem;
+      padding: 0.8rem;
     }
     ul {
-      padding-top: 0.8rem;
+padding-top: 0;
       margin: 0;
       // background: #efefef;
       li {
@@ -622,7 +620,7 @@ export default {
 .questionJS {
   width: 100vw;
   min-height: 100vh;
-  background: rgb(44, 42, 66) url(../assets/question.png) no-repeat center top;
+  background: #0C1126 url(../assets/question.png) no-repeat center top;
   background-size: 100%;
   overflow: hidden;
 }
